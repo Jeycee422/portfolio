@@ -71,12 +71,12 @@ function Projects() {
         </div>
 
 
-        <div className='lg:grid lg:grid-cols-3 lg:grid-rows-none lg:gap-10 md:grid md:grid-cols-3 md:grid-flow-row md:grid-rows-none grid grid-rows-3 grid-flow-col gap-6'>
+        <div className='lg:grid lg:grid-cols-3 lg:grid-rows-none lg:gap-10 md:grid md:grid-cols-3 md:grid-flow-row md:grid-rows-none grid grid-rows-3 grid-flow-col gap-3'>
             {
                 projList.filter((el) => el.framework === 'Next').map((proj,indx) => <Project name={proj.name} href={proj.href} src={proj.src} framework={proj.framework} blur={proj.blur} key={indx} />)
             }
             <div className='lg:col-span-3 md:col-span-3 row-span-3 flex justify-center items-center'>
-                <div className='lg:grid lg:grid-cols-2 lg:gap-10 md:grid md:grid-cols-2 lg:grid-rows-none md:grid-rows-none grid grid-rows-2 gap-6'>
+                <div className='lg:grid lg:grid-cols-2 lg:gap-10 md:grid md:grid-cols-2 lg:grid-rows-none md:grid-rows-none grid grid-rows-2 gap-3'>
                     {projList.filter(el => el.framework === 'React').map((proj,indx) => <Project key={indx} name={proj.name} href={proj.href} src={proj.src} framework={proj.framework} blur={proj.blur} />)}
                 </div>
             </div>

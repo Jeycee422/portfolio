@@ -6,10 +6,10 @@ import Link from 'next/link'
 const Project = ({name,href,src,framework,blur}) => {
     return (
         <div className='hover:shadow rounded-lg hover:scale-105 ease-out duration-150'>
-            <div className={`lg:w-80 sm:w-56 w-44 ${src} bg-cover lg:h-52 sm:h-36 h-24  rounded-t-lg`}>
+            <div className={`lg:w-80 sm:w-56 w-40 ${src} bg-cover lg:h-52 sm:h-36 h-20  rounded-t-lg`}>
                 <div className={`w-full h-full ${blur} rounded-t-lg`}></div>
             </div>
-            <div className='lg:w-80 sm:w-56 w-44 rounded-b-lg border border-neutral-100 flex flex-col lg:p-5 p-3 lg:space-y-2 space-y-1 md:text-base text-xs text-[#232e35] font-medium'>
+            <div className='lg:w-80 sm:w-56 w-40 rounded-b-lg border border-neutral-100 flex flex-col lg:p-5 p-3 lg:space-y-2 space-y-1 md:text-base text-xs text-[#232e35] font-medium'>
                 <div>{name}</div>
                 <div className='flex flex-row space-x-4'>
                     <div className='rounded border border-[#f1f1f1] px-2 py-1 text-[#656d72] md:text-xs text-[10px] font-medium'>{framework}</div>
@@ -46,6 +46,13 @@ function Projects() {
             blur: 'bg-black/50'
         },
         {
+            name:'Wordle Game',
+            href:'https://nunez-jeycee-wordle.vercel.app/',
+            src:"bg-[url('/wordle.png')]",
+            framework:'Next',
+            blur: 'bg-black/10'
+        },
+        {
             name:'Quiz App',
             href:'https://jeycee422.github.io/QuizApp/',
             src:"bg-[url('/quizApp.png')]",
@@ -73,13 +80,8 @@ function Projects() {
 
         <div className='lg:grid lg:grid-cols-3 lg:grid-rows-none lg:gap-10 md:grid md:grid-cols-3 md:grid-flow-row md:grid-rows-none grid grid-rows-3 grid-flow-col gap-3'>
             {
-                projList.filter((el) => el.framework === 'Next').map((proj,indx) => <Project name={proj.name} href={proj.href} src={proj.src} framework={proj.framework} blur={proj.blur} key={indx} />)
+                projList.map((proj,indx) => <Project name={proj.name} href={proj.href} src={proj.src} framework={proj.framework} blur={proj.blur} key={indx} />)
             }
-            <div className='lg:col-span-3 md:col-span-3 row-span-3 flex justify-center items-center'>
-                <div className='lg:grid lg:grid-cols-2 lg:gap-10 md:grid md:grid-cols-2 lg:grid-rows-none md:grid-rows-none grid grid-rows-2 gap-3'>
-                    {projList.filter(el => el.framework === 'React').map((proj,indx) => <Project key={indx} name={proj.name} href={proj.href} src={proj.src} framework={proj.framework} blur={proj.blur} />)}
-                </div>
-            </div>
         </div>
     </div>
   )

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function Hero() {
   return (
-    <div className='w-full flex justify-center items-center h-screen'>
+    <div id='me' className='w-full flex justify-center items-center h-screen'>
         <div className='w-10/12 lg:w-9/12 flex lg:flex-row flex-col justify-between lg:mb-28 mb-14'>
             <div className='lg:order-first order-second flex flex-col justify-center'>
                 <div className='flex flex-row items-center mb-4 lg:mb-6 mt-10'>

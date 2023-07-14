@@ -11,7 +11,7 @@ function Contact() {
   return (
     <div className='md:py-40 py-20 flex w-full justify-center'>
 			<div className='md:w-9/12 w-10/12 flex lg:flex-row flex-col lg:space-x-24'>
-				<form className='flex flex-col lg:w-[600px] w-11/12 text-[#656d72] lg:order-none md:order-1 order-1'>
+				<form className='flex flex-col lg:w-[600px] w-full text-[#656d72] lg:order-none md:order-1 order-1'>
 					<input className='focus:outline-1 focus:outline-[#7e74f1] mb-4 text-sm bg-[#fafafa] placeholder-[#656D72] rounded px-6 py-4' type='text' placeholder='Name' value={name} onChange={(e) => {
 						const rawValue = e.target.value
 						const sanitizedValue = rawValue.replace(/[\t\n\r]|<\/?[a-z][^>]*>/gi, '')

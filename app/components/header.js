@@ -23,9 +23,9 @@ function Header() {
     const shadowNav = shadowOn ? 'shadow-sm' : ''
 
     const nav = <>
-        <Link prefetch={false} href='#skills' className='cursor-pointer hover:underline hover:underline-offset-8'>Skills</Link>
-        <Link prefetch={false} href='#projects' className='cursor-pointer hover:underline hover:underline-offset-8'>Projects</Link>
-        <Link prefetch={false} href='#services' className='cursor-pointer hover:underline hover:underline-offset-8'>Services</Link>
+        <Link href='#projects' className='cursor-pointer hover:underline hover:underline-offset-8'>Projects</Link>
+        <Link href='#skills' className='cursor-pointer hover:underline hover:underline-offset-8'>Skills</Link>
+        <Link href='#services' className='cursor-pointer hover:underline hover:underline-offset-8'>Services</Link>
     </>
   return (
     <div className={`${shadowNav} w-full flex justify-center md:py-5 py-2 sticky z-10 top-0 bg-white`}>
@@ -40,11 +40,12 @@ function Header() {
                 />
                 {onMenu && <div className='absolute pt-4 pb-5 px-6 flex flex-col space-y-2 -left-5 rounded-b-lg bg-white border-neutral-100 border-x border-b-2'>{nav}</div>}
             </div>
-            <div className='items-center font-extrabold text-xl hidden md:inline-flex'>
-
-                <Image src='/braille.svg' alt='braille' height={38} width={38} />
-                JC.
-            </div>
+            <Link href='#me' >
+                <div className='items-center font-extrabold text-xl hidden md:inline-flex'>
+                    <Image src='/braille.svg' alt='braille' height={38} width={38} />
+                    JC.
+                </div>
+            </Link>
             <div className='hidden md:inline-flex flex flex-row justify-center w-6/12 sm:space-x-6 lg:space-x-14 text-base'>
                 {nav}
                 {/* <Image src='/three-dot.svg' alt='dot' width={11} height={2} /> */}

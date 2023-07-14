@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 function Skills() {
   return (
-    <div id='skills' className='bg-[#fbfbfb] w-full h-fit lg:py-40 py-20 text-[#232e35] flex flex-row items-center justify-center'>
+    <div id='skills' className='w-full h-fit lg:py-40 py-20 text-[#232e35] flex flex-row items-center justify-center'>
         <div className='w-10/12 lg:w-9/12 flex flex-col'>
             <div className='w-fit h-fit lg:mb-20 mb-10'>
                 <div className='flex flex-row items-center'>
@@ -12,7 +12,7 @@ function Skills() {
                 </div>
                 <div className='md:text-4xl text-2xl font-bold'>Skills</div>
             </div>
-            <div className='w-11/12 lg:w-6/12 space-y-10'>
+            <div className='w-full md:w-9/12 space-y-10'>
                 <div className='md:text-base text-sm'>
                     For 5+ years, I have been continuously learning in the field of front-end/ back-end and experimenting with new technologies and frameworks, and here you can see a summary of my skills.
                 </div>

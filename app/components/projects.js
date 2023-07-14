@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 const Project = ({name,href,src,framework,blur}) => {
     return (
-        <div className='hover:shadow rounded-lg hover:scale-105 ease-out duration-150'>
-            <div className={`lg:w-80 sm:w-56 w-40 ${src} bg-cover lg:h-52 sm:h-36 h-20  rounded-t-lg`}>
+        <div className='hover:drop-shadow-md drop-shadow rounded-lg hover:scale-105 ease-out duration-150'>
+            <div className={`lg:w-80 sm:w-56 w-[170px] ${src} bg-cover lg:h-52 sm:h-36 h-20  rounded-t-lg`}>
                 <div className={`w-full h-full ${blur} rounded-t-lg`}></div>
             </div>
-            <div className='lg:w-80 sm:w-56 w-40 rounded-b-lg border border-neutral-100 flex flex-col lg:p-5 p-3 lg:space-y-2 space-y-1 md:text-base text-xs text-[#232e35] font-medium'>
+            <div className='lg:w-80 sm:w-56 w-[170px] rounded-b-lg flex flex-col lg:p-5 p-3 lg:space-y-2 space-y-1 md:text-base text-xs text-[#232e35] font-medium bg-white'>
                 <div>{name}</div>
                 <div className='flex flex-row space-x-4'>
                     <div className='rounded border border-[#f1f1f1] px-2 py-1 text-[#656d72] md:text-xs text-[10px] font-medium'>{framework}</div>
@@ -24,6 +24,13 @@ const Project = ({name,href,src,framework,blur}) => {
 
 function Projects() {
     const [projList,setProjList] = useState([
+        {
+            name:'Wordle Game',
+            href:'https://nunez-jeycee-wordle.vercel.app/',
+            src:"bg-[url('/wordle.png')]",
+            framework:'Next',
+            blur: 'bg-black/10'
+        },
         {
             name:'2048 Game',
             href:'https://nunez-jeycee-2048-g.vercel.app/',
@@ -46,13 +53,6 @@ function Projects() {
             blur: 'bg-black/50'
         },
         {
-            name:'Wordle Game',
-            href:'https://nunez-jeycee-wordle.vercel.app/',
-            src:"bg-[url('/wordle.png')]",
-            framework:'Next',
-            blur: 'bg-black/10'
-        },
-        {
             name:'Quiz App',
             href:'https://jeycee422.github.io/QuizApp/',
             src:"bg-[url('/quizApp.png')]",
@@ -68,7 +68,7 @@ function Projects() {
         }
     ])
   return (
-    <div id='projects' className='h-fit lg:py-40 py-20 text-[#232e35] flex flex-col justify-center items-center'>
+    <div id='projects' className='h-fit bg-[#fbfbfb] w-full lg:py-40 py-20 text-[#232e35] flex flex-col justify-center items-center'>
         <div className='w-fit h-fit mb-20'>
             <div className='flex flex-row items-center'>
                 <div className='bg-[#d9d9d9] w-3 h-0.5 mr-3'></div>

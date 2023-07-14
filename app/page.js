@@ -16,8 +16,8 @@ export default function Home() {
     <main className="flex h-auto flex-col items-center scroll-smooth relative" style={inter.style}>
       <Header />
       <Hero />
-      <Skills />
       <Projects />
+      <Skills />
       <Services />
       <Contact />
       <Footer />
